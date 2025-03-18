@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Il Mio Portfolio - Progetti</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Stili comuni */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body { font-family: 'Roboto', sans-serif; background: linear-gradient(135deg, #f0f2f5, #e8ebf0); color: #333; line-height: 1.6; }
+
+    a { text-decoration: none; color: inherit; }
+
+    .container_header { height: 50px;  max-width: 1200px; margin: auto; padding: 0 20px; border: 0px solid black; }
+
+    header {
+      background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
+      backdrop-filter: blur(5px);
+      position: sticky; width: 100%; top: 0; left: 0; z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    nav { display: flex; justify-content: space-between; align-items: center; height: 50px; }
+    .logo { font-size: 1.5em; font-weight: 500; }
+    ul.nav-links { list-style: none; display: flex; align-items: center; }
+    ul.nav-links li { margin-left: 20px; }
+    ul.nav-links li a {
+      padding: 8px 12px;
+      border-radius: 20px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    ul.nav-links li a:hover {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+    }
+
+    main { margin-top: 5%; 
+      margin-bottom: 8%; text-align: center; }
+
+    h1 { font-size: 2.4em; margin-bottom: 20px; }
+
+    form {
+      width: 30%;
+      margin: 0 auto;
+      background: linear-gradient(135deg, #fff, #f7f7f7);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px 15px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      font-size: 1em;
+    }
+    form button {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      border: none;
+      padding: 10px 20px;
+      color: #fff;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+    
+    form button:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      height: 50px;
+      padding: 13px;
+      background: linear-gradient(135deg, #f7f7f7, #ffffff);
+      border-top: 1px solid #ddd;
+      color: #666;
+    }
+    .container_footer { height: 30px;  max-width: 1200px; margin: auto; padding: 0 20px; border: 0px solid black; }
+
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container_header">
+      <nav>
+        <div class="logo">Il Mio Portfolio</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="progetti.html">Progetti</a></li>
+          <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenuto dei Progetti -->
+  <main>
+    <h1>Contattami</h1>
+    <form action="#" method="post">
+      <input type="text" name="nome" placeholder="Il Tuo Nome" required>
+      <input type="email" name="email" placeholder="La Tua Email" required>
+      <textarea name="messaggio" rows="5" placeholder="Il Tuo Messaggio" required></textarea>
+      <button type="submit">Invia</button>
+    </form>
+  </main>
+ 
+  <!-- Footer -->
+  <footer>
+    <div class="container_footer">
+      <p>&copy; 2025 Il Mio Portfolio.</p>
+    </div>
+  </footer>
+</body>
+</html>
