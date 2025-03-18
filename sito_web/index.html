@@ -8,29 +8,74 @@
   
   <style>
     /* Stili comuni */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * { 
+      margin: 0;
+      padding: 0; 
+      box-sizing: border-box; 
+    }
 
-    body { font-family: 'Roboto', sans-serif; background: linear-gradient(135deg, #f0f2f5, #e8ebf0); color: #333; line-height: 1.6; }
+    html, body {
+    height: 100%;
+    }
 
-    a { text-decoration: none; color: inherit; }
 
-    .container_header { height: 50px;  max-width: 1200px; margin: auto; padding: 0 20px; border: 0px solid black; }
+    body { 
+      font-family: 'Roboto', sans-serif; 
+      background: linear-gradient(135deg, #f0f2f5, #e8ebf0); 
+      color: #333; 
+      line-height: 1.6; 
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      text-decoration: none; 
+      color: inherit; 
+    }
+
+    .container_header { 
+      height: 50px;  
+      max-width: 1200px; 
+      margin: auto;
+      padding: 0 20px;
+    }
 
     header {
       background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
       backdrop-filter: blur(5px);
-      position: sticky; width: 100%; top: 0; left: 0; z-index: 1000;
+      position: sticky; 
+      width: 100%; 
+      top: 0;
+      left: 0; 
+      z-index: 1000;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
-    nav { display: flex; justify-content: space-between; align-items: center; height: 50px; }
-    .logo { font-size: 1.5em; font-weight: 500; }
-    ul.nav-links { list-style: none; display: flex; align-items: center; }
-    ul.nav-links li { margin-left: 20px; }
+    nav { 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      height: 50px;
+    }
+
+    .logo {
+      font-size: 1.5em; 
+      font-weight: 500; 
+    }
+
+    ul.nav-links { 
+      list-style: none; 
+      display: flex; 
+      align-items: center; 
+    }
+
+    ul.nav-links li { 
+      margin-left: 20px; 
+    }
+
     ul.nav-links li a {
       padding: 8px 12px;
       border-radius: 20px;
-      transition: background 0.3s, color 0.3s;
     }
 
     ul.nav-links li a:hover {
@@ -38,8 +83,12 @@
       color: #fff;
     }
 
-    main { margin-top: 5%; 
-      margin-bottom: 17.5%; text-align: center; }
+    main { 
+      margin-top: 5%; 
+      
+      text-align: center; 
+      flex: 1;
+    }
 
       h1 { 
       font-size: 2.4em; 
@@ -61,36 +110,43 @@
       border-top: 1px solid #ddd;
       color: #666;
     }
-    .container_footer { height: 30px;  max-width: 1200px; margin: auto; padding: 0 20px; border: 0px solid black; }
+    .container_footer { 
+      height: 30px;  
+      max-width: 1200px; 
+      margin: auto; 
+      padding: 0 20px; 
+      border: 0px solid black;
+    }
 
   </style>
 </head>
 <body>
   <!-- Header -->
-  <header>
-    <div class="container_header">
-      <nav>
-        <div class="logo">Il Mio Portfolio</div>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="progetti.html">Progetti</a></li>
-          <li><a href="contatti.html">Contatti</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <header>
+      <div class="container_header">
+        <nav>
+          <div class="logo">Il Mio Portfolio</div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="progetti.html">Progetti</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-  <!-- Contenuto dei Progetti -->
-  <main>
-      <h1>Ciao, sono <br> Marco La Valle </h1>
-      <p>Benvenuto nel mio portfolio. Qui troverai una raccolta dei miei <br> progetti, le mie competenze e le modalità per contattarmi.</p>
-  </main>
- 
-  <!-- Footer -->
-  <footer>
-    <div class="container_footer">
-      <p>&copy; 2025 Il Mio Portfolio.</p>
-    </div>
-  </footer>
+    <!-- Contenuto dei Progetti -->
+    
+    <main>
+        <h1>Ciao, sono <br> Marco La Valle </h1>
+        <p>Benvenuto nel mio portfolio. Qui troverai una raccolta dei miei <br> progetti, le mie competenze e le modalità per contattarmi.</p>
+    </main>
+  
+    <!-- Footer -->
+    <footer>
+      <div class="container_footer">
+        <p>&copy; 2025 Il Mio Portfolio.</p>
+      </div>
+    </footer>
 </body>
 </html>

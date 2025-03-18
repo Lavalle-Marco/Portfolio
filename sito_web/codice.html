@@ -3,34 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Il Mio Portfolio - Codice Progetti</title>
+  <title>Il Mio Portfolio - home</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   
   <style>
     /* Stili comuni */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * { 
+      margin: 0;
+      padding: 0; 
+      box-sizing: border-box; 
+    }
 
-    body { font-family: 'Roboto', sans-serif; background: linear-gradient(135deg, #f0f2f5, #e8ebf0); color: #333; line-height: 1.6; }
+    html, body {
+    height: 100%;
+    }
 
-    a { text-decoration: none; color: inherit; }
 
-    .container_header { height: 50px;  max-width: 1200px; margin: auto; padding: 0 20px; border: 0px solid black; }
+    body { 
+      font-family: 'Roboto', sans-serif; 
+      background: linear-gradient(135deg, #f0f2f5, #e8ebf0); 
+      color: #333; 
+      line-height: 1.6; 
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      text-decoration: none; 
+      color: inherit; 
+    }
+
+    .container_header { 
+      height: 50px;  
+      max-width: 1200px; 
+      margin: auto;
+      padding: 0 20px;
+    }
 
     header {
       background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
       backdrop-filter: blur(5px);
-      position: sticky; width: 100%; top: 0; left: 0; z-index: 1000;
+      position: sticky; 
+      width: 100%; 
+      top: 0;
+      left: 0; 
+      z-index: 1000;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
-    nav { display: flex; justify-content: space-between; align-items: center; height: 50px; }
-    .logo { font-size: 1.5em; font-weight: 500; }
-    ul.nav-links { list-style: none; display: flex; align-items: center; }
-    ul.nav-links li { margin-left: 20px; }
+    nav { 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      height: 50px;
+    }
+
+    .logo {
+      font-size: 1.5em; 
+      font-weight: 500; 
+    }
+
+    ul.nav-links { 
+      list-style: none; 
+      display: flex; 
+      align-items: center; 
+    }
+
+    ul.nav-links li { 
+      margin-left: 20px; 
+    }
+
     ul.nav-links li a {
       padding: 8px 12px;
       border-radius: 20px;
-      transition: background 0.3s, color 0.3s;
     }
 
     ul.nav-links li a:hover {
@@ -38,10 +83,12 @@
       color: #fff;
     }
 
-    main { margin-top: 8%; 
-      margin-bottom: 9%; ; }
+    main { 
+      margin-top: 5%; 
+      flex: 1;
+    }
 
-      .project {
+    .project {
       margin-left: 12.5%;
       align-items: center;
       background: white;
@@ -84,7 +131,9 @@
       transform: scale(1.05);
     }
 
+
     footer {
+        margin-top: 3%;
       text-align: center;
       height: 50px;
       padding: 13px;
@@ -92,38 +141,46 @@
       border-top: 1px solid #ddd;
       color: #666;
     }
-    .container_footer { height: 30px;  max-width: 1200px; margin: auto; padding: 0 20px; border: 0px solid black; }
+
+    .container_footer { 
+      height: 30px;  
+      max-width: 1200px; 
+      margin: auto; 
+      padding: 0 20px; 
+      border: 0px solid black;
+    }
 
   </style>
 </head>
 <body>
   <!-- Header -->
-  <header>
-    <div class="container_header">
-      <nav>
-        <div class="logo">Il Mio Portfolio</div>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="progetti.html">Progetti</a></li>
-          <li><a href="contatti.html">Contatti</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <header>
+      <div class="container_header">
+        <nav>
+          <div class="logo">Il Mio Portfolio</div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="progetti.html">Progetti</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-  <!-- Contenuto dei Progetti -->
-  <main>
-    <div class="project">
-      <h1>Codice Fiscale</h1>
-      <code class="code-box"><pre>
-        
+    <!-- Contenuto dei Progetti -->
+    
+    <main>
+  <div class="project">
+    <h1>Codice Fiscale</h1>
+    <code class="code-box"><pre>
+      
   #include <stdio.h>
   #include <string.h>
   #include <ctype.h>
   #include <stdlib.h>
-  
+
   int check = 1;
-  
+
   void toglispazi(char input[]);
   void maiuscolo(char stringa[]);
   int calcola_cognome(char cognome[], char codice_fiscale[]);
@@ -131,329 +188,329 @@
   int calcola_data(char giorno[], char mese[], char anno[], char sesso, char codice_fiscale[]);
   int calcola_comune(char comune[], char codice_fiscale[]);
   void calcola_controllo(char codice_fiscale[]);
-  
+
   int main() {
-      char codice_fiscale[17] = {0};
-      char cognome[20], nome[20], comune[30], sesso;
-      char data[11], giorno[3], mese[3], anno[5];
-  
-      do {
-          printf("Inserisci cognome: ");
-          scanf(" %[^\n]", cognome);
-          toglispazi(cognome);
-          maiuscolo(cognome);
-          check = calcola_cognome(cognome, codice_fiscale);
-      } while (check == 0);
-  
-      do {
-          printf("Inserisci nome: ");
-          scanf(" %[^\n]", nome);
-          toglispazi(nome);
-          maiuscolo(nome);
-          check = calcola_nome(nome, codice_fiscale);
-      } while (check == 0);
-  
-      
-  
-      do {
-          printf("Sesso (F-M): ");
-          scanf(" %c", &sesso);
-          if (sesso != 'F' && sesso != 'M') {
-              printf("Carattere non valido. Inserire solo F o M.\n");
-          }
-      } while (sesso != 'F' && sesso != 'M');
-  
-      do {
-          printf("Inserire la data di nascita (gg/mm/aaaa): ");
-          scanf("%10s", data);
-          sscanf(data, "%2s/%2s/%4s", giorno, mese, anno);
-          check = calcola_data(giorno, mese, anno, sesso, codice_fiscale);
-      } while (check == 0);
-  
-      do {
-          printf("Inserisci il nome del comune: ");
-          scanf(" %[^\n]", comune);
-          toglispazi(comune);
-          maiuscolo(comune);
-          check = calcola_comune(comune, codice_fiscale);
-      } while (check == 0);
-  
-      calcola_controllo(codice_fiscale);
-      printf("Codice fiscale: %s\n", codice_fiscale);
+    char codice_fiscale[17] = {0};
+    char cognome[20], nome[20], comune[30], sesso;
+    char data[11], giorno[3], mese[3], anno[5];
+
+    do {
+        printf("Inserisci cognome: ");
+        scanf(" %[^\n]", cognome);
+        toglispazi(cognome);
+        maiuscolo(cognome);
+        check = calcola_cognome(cognome, codice_fiscale);
+    } while (check == 0);
+
+    do {
+        printf("Inserisci nome: ");
+        scanf(" %[^\n]", nome);
+        toglispazi(nome);
+        maiuscolo(nome);
+        check = calcola_nome(nome, codice_fiscale);
+    } while (check == 0);
+
+    
+
+    do {
+        printf("Sesso (F-M): ");
+        scanf(" %c", &sesso);
+        if (sesso != 'F' && sesso != 'M') {
+            printf("Carattere non valido. Inserire solo F o M.\n");
+        }
+    } while (sesso != 'F' && sesso != 'M');
+
+    do {
+        printf("Inserire la data di nascita (gg/mm/aaaa): ");
+        scanf("%10s", data);
+        sscanf(data, "%2s/%2s/%4s", giorno, mese, anno);
+        check = calcola_data(giorno, mese, anno, sesso, codice_fiscale);
+    } while (check == 0);
+
+    do {
+        printf("Inserisci il nome del comune: ");
+        scanf(" %[^\n]", comune);
+        toglispazi(comune);
+        maiuscolo(comune);
+        check = calcola_comune(comune, codice_fiscale);
+    } while (check == 0);
+
+    calcola_controllo(codice_fiscale);
+    printf("Codice fiscale: %s\n", codice_fiscale);
   }
-  
+
   void toglispazi(char input[]) {
-      char *dest = input;
-      for (char *src = input; *src; src++) {
-          if (*src != ' ') {
-              *dest++ = *src;
-          }
-      }
-      *dest = '\0';
+    char *dest = input;
+    for (char *src = input; *src; src++) {
+        if (*src != ' ') {
+            *dest++ = *src;
+        }
+    }
+    *dest = '\0';
   }
-  
+
   void maiuscolo(char stringa[]) {
-      for (int i = 0; stringa[i]; i++) {
-          stringa[i] = toupper(stringa[i]);
-      }
+    for (int i = 0; stringa[i]; i++) {
+        stringa[i] = toupper(stringa[i]);
+    }
   }
-  
-  
+
+
   int calcola_cognome(char cognome[], char codice_fiscale[]) {
-      check = 1;
-  
-      char cons[25] = {0}, vocal[25] = {0};
-      int cont_cons = 0, cont_vocal = 0;
-  
-      for (int i = 0; cognome[i]; i++) {
-          if (isalpha(cognome[i])) {
-  
-              char tabella_vocali[6] = "AEIOU";
-  
-              if (strchr(tabella_vocali, cognome[i]) != NULL) {
-                  vocal[cont_vocal] = cognome[i];
-                  cont_vocal++;
-              } else {
-                  cons[cont_cons] = cognome[i];
-                  cont_cons++;
-              }
-          }
-      }
-  
-      if (cont_cons >= 3) {
-          codice_fiscale[0]= cons[0];
-          codice_fiscale[1]= cons[1];
-          codice_fiscale[2]= cons[2];
-      }
-      else if (cont_cons == 2) {
-          codice_fiscale[0]= cons[0];
-          codice_fiscale[1]= cons[1];
-          codice_fiscale[2]= vocal[0];
-      }
-      else if (cont_cons == 1 && cont_vocal >= 2) {
-          codice_fiscale[0]= cons[0];
-          codice_fiscale[1]= vocal[0];
-          codice_fiscale[2]= vocal[1];
-          }
-          else if (cont_cons == 1 && cont_vocal == 1) {
-          codice_fiscale[0]= cons[0];
-          codice_fiscale[1]= vocal[0];
-          codice_fiscale[2]= 'x';
-      }
-      else if (cont_cons == 0 && cont_vocal >= 2) {
-          codice_fiscale[0]= vocal[0];
-          codice_fiscale[1]= vocal[1];
-          codice_fiscale[2]= 'x';
-      }
-      else{
-          printf("cognome non valido.\n");
-          check = 0;
-      }
-  
-      return check;
+    check = 1;
+
+    char cons[25] = {0}, vocal[25] = {0};
+    int cont_cons = 0, cont_vocal = 0;
+
+    for (int i = 0; cognome[i]; i++) {
+        if (isalpha(cognome[i])) {
+
+            char tabella_vocali[6] = "AEIOU";
+
+            if (strchr(tabella_vocali, cognome[i]) != NULL) {
+                vocal[cont_vocal] = cognome[i];
+                cont_vocal++;
+            } else {
+                cons[cont_cons] = cognome[i];
+                cont_cons++;
+            }
+        }
+    }
+
+    if (cont_cons >= 3) {
+        codice_fiscale[0]= cons[0];
+        codice_fiscale[1]= cons[1];
+        codice_fiscale[2]= cons[2];
+    }
+    else if (cont_cons == 2) {
+        codice_fiscale[0]= cons[0];
+        codice_fiscale[1]= cons[1];
+        codice_fiscale[2]= vocal[0];
+    }
+    else if (cont_cons == 1 && cont_vocal >= 2) {
+        codice_fiscale[0]= cons[0];
+        codice_fiscale[1]= vocal[0];
+        codice_fiscale[2]= vocal[1];
+        }
+        else if (cont_cons == 1 && cont_vocal == 1) {
+        codice_fiscale[0]= cons[0];
+        codice_fiscale[1]= vocal[0];
+        codice_fiscale[2]= 'x';
+    }
+    else if (cont_cons == 0 && cont_vocal >= 2) {
+        codice_fiscale[0]= vocal[0];
+        codice_fiscale[1]= vocal[1];
+        codice_fiscale[2]= 'x';
+    }
+    else{
+        printf("cognome non valido.\n");
+        check = 0;
+    }
+
+    return check;
   }
-  
+
   int calcola_nome(char nome[], char codice_fiscale[]) {
-      check = 1;
-  
-      char cons[25] = {0}, vocal[25] = {0};
-      int cont_cons = 0, cont_vocal = 0;
-  
-      for (int i = 0; nome[i]; i++) {
-          if (isalpha(nome[i])) {
-  
-              char tabella_vocali[6] = "AEIOU";
-  
-              if (strchr(tabella_vocali, nome[i]) != NULL) {
-                  vocal[cont_vocal] = nome[i];
-                  cont_vocal++;
-              } else {
-                  cons[cont_cons] = nome[i];
-                  cont_cons++;
-              }
-          }
-      }
-  
-      if (cont_cons >= 4) {
-          codice_fiscale[3] = cons[0];
-          codice_fiscale[4] = cons[2];
-          codice_fiscale[5] = cons[3];
-      } 
-      else if (cont_cons == 3) {
-          codice_fiscale[3] = cons[0];
-          codice_fiscale[4] = cons[1];
-          codice_fiscale[5] = cons[2];
-      } 
-      else if (cont_cons == 2) {
-          codice_fiscale[3] = cons[0];
-          codice_fiscale[4] = cons[1];
-          codice_fiscale[5] = vocal[0];
-      } 
-      else if (cont_cons == 1 && cont_vocal >= 2) {
-          codice_fiscale[3] = cons[0];
-          codice_fiscale[4] = vocal[0];
-          codice_fiscale[5] = vocal[1];
-      }
-      else if (cont_cons == 1 && cont_vocal == 1) {
-          codice_fiscale[3] = cons[0];
-          codice_fiscale[4] = vocal[0];
-          codice_fiscale[5] = 'X';
-      }
-      else if (cont_cons == 0 && cont_vocal >= 2) {
-          codice_fiscale[3] = vocal[0];
-          codice_fiscale[4] = vocal[1];
-          codice_fiscale[5] = 'X';
-      }
-      else{
-          printf("nome non valido.\n");
-          check = 0;
-      }
-  
-      return check;
+    check = 1;
+
+    char cons[25] = {0}, vocal[25] = {0};
+    int cont_cons = 0, cont_vocal = 0;
+
+    for (int i = 0; nome[i]; i++) {
+        if (isalpha(nome[i])) {
+
+            char tabella_vocali[6] = "AEIOU";
+
+            if (strchr(tabella_vocali, nome[i]) != NULL) {
+                vocal[cont_vocal] = nome[i];
+                cont_vocal++;
+            } else {
+                cons[cont_cons] = nome[i];
+                cont_cons++;
+            }
+        }
+    }
+
+    if (cont_cons >= 4) {
+        codice_fiscale[3] = cons[0];
+        codice_fiscale[4] = cons[2];
+        codice_fiscale[5] = cons[3];
+    } 
+    else if (cont_cons == 3) {
+        codice_fiscale[3] = cons[0];
+        codice_fiscale[4] = cons[1];
+        codice_fiscale[5] = cons[2];
+    } 
+    else if (cont_cons == 2) {
+        codice_fiscale[3] = cons[0];
+        codice_fiscale[4] = cons[1];
+        codice_fiscale[5] = vocal[0];
+    } 
+    else if (cont_cons == 1 && cont_vocal >= 2) {
+        codice_fiscale[3] = cons[0];
+        codice_fiscale[4] = vocal[0];
+        codice_fiscale[5] = vocal[1];
+    }
+    else if (cont_cons == 1 && cont_vocal == 1) {
+        codice_fiscale[3] = cons[0];
+        codice_fiscale[4] = vocal[0];
+        codice_fiscale[5] = 'X';
+    }
+    else if (cont_cons == 0 && cont_vocal >= 2) {
+        codice_fiscale[3] = vocal[0];
+        codice_fiscale[4] = vocal[1];
+        codice_fiscale[5] = 'X';
+    }
+    else{
+        printf("nome non valido.\n");
+        check = 0;
+    }
+
+    return check;
   }
-  
+
   int calcola_data(char giorno[], char mese[], char anno[], char sesso, char codice_fiscale[]) {
-      check = 1;
-  
-      int g = atoi(giorno);
-      int m = atoi(mese);
-      int a = atoi(anno);
-      char tabella_mese[13] = "ABCDEFGHIJKL";
-  
-      if (g <= 0 || m < 1 || m > 12 || a < 0 ||
-          (g > 30 && (m == 4 || m == 6 || m == 9 || m == 11)) ||
-          (g > 31 && (m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12)) ||
-          (g > 28 && m == 2)) {
-          return 0;
-      }
-      
-  
-      codice_fiscale[6] = (a % 100) / 10 + '0';
-      codice_fiscale[7] = a % 10 + '0';
-      codice_fiscale[8] = tabella_mese[m - 1];
-          codice_fiscale[9] = (g + (sesso == 'F' ? 40 : 0)) / 10 + '0';
-          codice_fiscale[10] = (g + (sesso == 'F' ? 40 : 0)) % 10 + '0';
-  
-      return 1;
+    check = 1;
+
+    int g = atoi(giorno);
+    int m = atoi(mese);
+    int a = atoi(anno);
+    char tabella_mese[13] = "ABCDEFGHIJKL";
+
+    if (g <= 0 || m < 1 || m > 12 || a < 0 ||
+        (g > 30 && (m == 4 || m == 6 || m == 9 || m == 11)) ||
+        (g > 31 && (m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12)) ||
+        (g > 28 && m == 2)) {
+        return 0;
+    }
+    
+
+    codice_fiscale[6] = (a % 100) / 10 + '0';
+    codice_fiscale[7] = a % 10 + '0';
+    codice_fiscale[8] = tabella_mese[m - 1];
+        codice_fiscale[9] = (g + (sesso == 'F' ? 40 : 0)) / 10 + '0';
+        codice_fiscale[10] = (g + (sesso == 'F' ? 40 : 0)) % 10 + '0';
+
+    return 1;
   }
-  
+
   int calcola_comune(char comune[], char codice_fiscale[]) {
-      check = 1;
-      
-      #define MAX_LEN 30
-      char comune_file[MAX_LEN], codice_catastale[5]; 
-      FILE *file = fopen("codice_cat.txt", "r");
-      if (file == NULL) {
-          perror("Errore nell'aprire il file codice_cat.txt");
-          return 0;
-      }
-  
-      while (fscanf(file, "%s %4s", comune_file, codice_catastale) == 2) {
-          if (strcmp(comune, comune_file) == 0) {
-              strncpy(codice_fiscale + 11, codice_catastale, 4);
-              fclose(file);
-              return 1;
-          }
-      }
-  
-      fclose(file);
-      printf("Comune non trovato.\n");
-      return 0;
+    check = 1;
+    
+    #define MAX_LEN 30
+    char comune_file[MAX_LEN], codice_catastale[5]; 
+    FILE *file = fopen("codice_cat.txt", "r");
+    if (file == NULL) {
+        perror("Errore nell'aprire il file codice_cat.txt");
+        return 0;
+    }
+
+    while (fscanf(file, "%s %4s", comune_file, codice_catastale) == 2) {
+        if (strcmp(comune, comune_file) == 0) {
+            strncpy(codice_fiscale + 11, codice_catastale, 4);
+            fclose(file);
+            return 1;
+        }
+    }
+
+    fclose(file);
+    printf("Comune non trovato.\n");
+    return 0;
   }
-  
-  
+
+
   void calcola_controllo(char codice_fiscale[]){
-      check = 1;
-  
-      int somma = 0;
-      int resto = 0;
-      // Tabella per il carattere di controllo
-      char tabella_controllo[27] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  
-  
-      // Calcolo della somma dispari
-      for (int i = 0; i < 15; i += 2) {
-          switch (codice_fiscale[i]) {
-              case 'A': case '0': somma += 1; break;
-              case 'B': case '1': somma += 0; break;
-              case 'C': case '2': somma += 5; break;
-              case 'D': case '3': somma += 7; break;
-              case 'E': case '4': somma += 9; break;
-              case 'F': case '5': somma += 13; break;
-              case 'G': case '6': somma += 15; break;
-              case 'H': case '7': somma += 17; break;
-              case 'I': case '8': somma += 19; break;
-              case 'J': case '9': somma += 21; break;
-              case 'K': somma += 2; break;
-              case 'L': somma += 4; break;
-              case 'M': somma += 18; break;
-              case 'N': somma += 20; break;
-              case 'O': somma += 11; break;
-              case 'P': somma += 3; break;
-              case 'Q': somma += 6; break;
-              case 'R': somma += 8; break;
-              case 'S': somma += 12; break;
-              case 'T': somma += 14; break;
-              case 'U': somma += 16; break;
-              case 'V': somma += 10; break;
-              case 'W': somma += 22; break;
-              case 'X': somma += 25; break;
-              case 'Y': somma += 24; break;
-              case 'Z': somma += 23; break;
-          }
-      }
-  
-  
-      // Calcolo della somma pari
-      for (int i = 1; i < 15; i += 2) {
-          switch (codice_fiscale[i]) {
-              case 'A': case '0': somma += 0; break;
-              case 'B': case '1': somma += 1; break;
-              case 'C': case '2': somma += 2; break;
-              case 'D': case '3': somma += 3; break;
-              case 'E': case '4': somma += 4; break;
-              case 'F': case '5': somma += 5; break;
-              case 'G': case '6': somma += 6; break;
-              case 'H': case '7': somma += 7; break;
-              case 'I': case '8': somma += 8; break;
-              case 'J': case '9': somma += 9; break;
-              case 'K': somma += 10; break;
-              case 'L': somma += 11; break;
-              case 'M': somma += 12; break;
-              case 'N': somma += 13; break;
-              case 'O': somma += 14; break;
-              case 'P': somma += 15; break;
-              case 'Q': somma += 16; break;
-              case 'R': somma += 17; break;
-              case 'S': somma += 18; break;
-              case 'T': somma += 19; break;
-              case 'U': somma += 20; break;
-              case 'V': somma += 21; break;
-              case 'W': somma += 22; break;
-              case 'X': somma += 23; break;
-              case 'Y': somma += 24; break;
-              case 'Z': somma += 25; break;
-          }
-      }
-  
-  
-      // trova carattere di controllo tramite resto
-      resto = somma % 26;
-      codice_fiscale[15] = tabella_controllo[resto];
-      
+    check = 1;
+
+    int somma = 0;
+    int resto = 0;
+    // Tabella per il carattere di controllo
+    char tabella_controllo[27] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+
+    // Calcolo della somma dispari
+    for (int i = 0; i < 15; i += 2) {
+        switch (codice_fiscale[i]) {
+            case 'A': case '0': somma += 1; break;
+            case 'B': case '1': somma += 0; break;
+            case 'C': case '2': somma += 5; break;
+            case 'D': case '3': somma += 7; break;
+            case 'E': case '4': somma += 9; break;
+            case 'F': case '5': somma += 13; break;
+            case 'G': case '6': somma += 15; break;
+            case 'H': case '7': somma += 17; break;
+            case 'I': case '8': somma += 19; break;
+            case 'J': case '9': somma += 21; break;
+            case 'K': somma += 2; break;
+            case 'L': somma += 4; break;
+            case 'M': somma += 18; break;
+            case 'N': somma += 20; break;
+            case 'O': somma += 11; break;
+            case 'P': somma += 3; break;
+            case 'Q': somma += 6; break;
+            case 'R': somma += 8; break;
+            case 'S': somma += 12; break;
+            case 'T': somma += 14; break;
+            case 'U': somma += 16; break;
+            case 'V': somma += 10; break;
+            case 'W': somma += 22; break;
+            case 'X': somma += 25; break;
+            case 'Y': somma += 24; break;
+            case 'Z': somma += 23; break;
+        }
+    }
+
+
+    // Calcolo della somma pari
+    for (int i = 1; i < 15; i += 2) {
+        switch (codice_fiscale[i]) {
+            case 'A': case '0': somma += 0; break;
+            case 'B': case '1': somma += 1; break;
+            case 'C': case '2': somma += 2; break;
+            case 'D': case '3': somma += 3; break;
+            case 'E': case '4': somma += 4; break;
+            case 'F': case '5': somma += 5; break;
+            case 'G': case '6': somma += 6; break;
+            case 'H': case '7': somma += 7; break;
+            case 'I': case '8': somma += 8; break;
+            case 'J': case '9': somma += 9; break;
+            case 'K': somma += 10; break;
+            case 'L': somma += 11; break;
+            case 'M': somma += 12; break;
+            case 'N': somma += 13; break;
+            case 'O': somma += 14; break;
+            case 'P': somma += 15; break;
+            case 'Q': somma += 16; break;
+            case 'R': somma += 17; break;
+            case 'S': somma += 18; break;
+            case 'T': somma += 19; break;
+            case 'U': somma += 20; break;
+            case 'V': somma += 21; break;
+            case 'W': somma += 22; break;
+            case 'X': somma += 23; break;
+            case 'Y': somma += 24; break;
+            case 'Z': somma += 25; break;
+        }
+    }
+
+
+    // trova carattere di controllo tramite resto
+    resto = somma % 26;
+    codice_fiscale[15] = tabella_controllo[resto];
+    
   }
-        </pre>
-      </code>
-      <br>
-      <a href="progetti.html" class="btn">Torna ai Progetti</a>
-    </div>
-  </main>
- 
-  <!-- Footer -->
-  <footer>
-    <div class="container_footer">
-      <p>&copy; 2025 Il Mio Portfolio.</p>
-    </div>
-  </footer>
+      </pre>
+    </code>
+    <br>
+    <a href="progetti.html" class="btn">Torna ai Progetti</a>
+  </div>
+    </main>
+  
+    <!-- Footer -->
+    <footer>
+      <div class="container_footer">
+        <p>&copy; 2025 Il Mio Portfolio.</p>
+      </div>
+    </footer>
 </body>
 </html>

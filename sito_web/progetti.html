@@ -3,35 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Il Mio Portfolio - home</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=download" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-  <title>Il Mio Portfolio - Progetti</title>
   
   <style>
     /* Stili comuni */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * { 
+      margin: 0;
+      padding: 0; 
+      box-sizing: border-box; 
+    }
 
-    body { font-family: 'Roboto', sans-serif; background: linear-gradient(135deg, #f0f2f5, #e8ebf0); color: #333; line-height: 1.6; }
+    html, body {
+    height: 100%;
+    }
 
-    a { text-decoration: none; color: inherit; }
 
-    .container_header { height: 50px;  max-width: 1200px; margin: auto; padding: 0 20px; border: 0px solid black; }
+    body { 
+      font-family: 'Roboto', sans-serif; 
+      background: linear-gradient(135deg, #f0f2f5, #e8ebf0); 
+      color: #333; 
+      line-height: 1.6; 
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      text-decoration: none; 
+      color: inherit; 
+    }
+
+    .container_header { 
+      height: 50px;  
+      max-width: 1200px; 
+      margin: auto;
+      padding: 0 20px;
+    }
 
     header {
       background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
       backdrop-filter: blur(5px);
-      position: sticky; width: 100%; top: 0; left: 0; z-index: 1000;
+      position: sticky; 
+      width: 100%; 
+      top: 0;
+      left: 0; 
+      z-index: 1000;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
-    nav { display: flex; justify-content: space-between; align-items: center; height: 50px; }
-    .logo { font-size: 1.5em; font-weight: 500; }
-    ul.nav-links { list-style: none; display: flex; align-items: center; }
-    ul.nav-links li { margin-left: 20px; }
+    nav { 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      height: 50px;
+    }
+
+    .logo {
+      font-size: 1.5em; 
+      font-weight: 500; 
+    }
+
+    ul.nav-links { 
+      list-style: none; 
+      display: flex; 
+      align-items: center; 
+    }
+
+    ul.nav-links li { 
+      margin-left: 20px; 
+    }
+
     ul.nav-links li a {
       padding: 8px 12px;
       border-radius: 20px;
-      transition: background 0.3s, color 0.3s;
     }
 
     ul.nav-links li a:hover {
@@ -39,8 +84,13 @@
       color: #fff;
     }
 
-    main { margin-top: 5%; 
-      margin-bottom: 11.3%; text-align: center; }
+    main { 
+      margin-top: 5%; 
+      
+      text-align: center; 
+      flex: 1;
+    }
+
 
     h1 { font-size: 2.4em; margin-bottom: 20px; }
 
@@ -118,7 +168,7 @@
       font-family:'Courier New', Courier, monospace;
       line-height: 1px;
     }
-
+      
 
     footer {
       text-align: center;
@@ -128,51 +178,56 @@
       border-top: 1px solid #ddd;
       color: #666;
     }
-    .container_footer { height: 30px;  max-width: 1200px; margin: auto; padding: 0 20px; border: 0px solid black; }
+    .container_footer { 
+      height: 30px;  
+      max-width: 1200px; 
+      margin: auto; 
+      padding: 0 20px; 
+      border: 0px solid black;
+    }
 
   </style>
 </head>
 <body>
   <!-- Header -->
-  <header>
-    <div class="container_header">
-      <nav>
-        <div class="logo">Il Mio Portfolio</div>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="progetti.html">Progetti</a></li>
-          <li><a href="contatti.html">Contatti</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <header>
+      <div class="container_header">
+        <nav>
+          <div class="logo">Il Mio Portfolio</div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="progetti.html">Progetti</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-  <!-- Contenuto dei Progetti -->
-  <main>
-    <h1>I Miei Progetti</h1>
-    <div class="projects-grid">
-      <div class="project-card">
-        <!-- <img src="https://via.placeholder.com/300x180" alt="Progetto 1"> -->
-        <div class="card-content">
-          <h3>Codice Fiscale</h3>
-          <h4>Linguaggio C</h4>
-          <p>Un semplice programma per generare il codice fiscale italiano.</p>
-          <a href="codice.html" class="code-btn">{ }</a>
-          <a href="downloads/Codice_Fiscale.zip" class="download-btn" download><span class="material-symbols-outlined">
-            download
-            </span></a>
+    <!-- Contenuto dei Progetti -->
+    
+    <main>
+      <h1>I Miei Progetti</h1>
+      <div class="projects-grid">
+        <div class="project-card">
+          <!-- <img src="https://via.placeholder.com/300x180" alt="Progetto 1"> -->
+          <div class="card-content">
+            <h3>Codice Fiscale</h3>
+            <h4>Linguaggio C</h4>
+            <p>Un semplice programma per generare il codice fiscale italiano.</p>
+            <a href="codice.html" class="code-btn">{ }</a>
+            <a href="downloads/Codice_Fiscale.zip" class="download-btn" download><span class="material-symbols-outlined">
+              download
+              </span></a>
+          </div>
         </div>
       </div>
-      
+    </main>
+  
+    <!-- Footer -->
+    <footer>
+      <div class="container_footer">
+        <p>&copy; 2025 Il Mio Portfolio.</p>
       </div>
-    </div>
-  </main>
- 
-  <!-- Footer -->
-  <footer>
-    <div class="container_footer">
-      <p>&copy; 2025 Il Mio Portfolio.</p>
-    </div>
-  </footer>
+    </footer>
 </body>
 </html>
